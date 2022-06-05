@@ -1,7 +1,7 @@
 
-package repository;
+package com.SpringConDB.SpringBoot.repository;
 
-import model.Persona;
+import com.SpringConDB.SpringBoot.model.Persona;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

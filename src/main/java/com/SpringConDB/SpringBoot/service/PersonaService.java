@@ -1,10 +1,10 @@
 
-package service;
+package com.SpringConDB.SpringBoot.service;
 
 import java.util.List;
-import model.Persona;
+import com.SpringConDB.SpringBoot.model.Persona;
 import org.springframework.beans.factory.annotation.Autowired;
-import repository.PersonaRepository;
+import com.SpringConDB.SpringBoot.repository.PersonaRepository;
 import org.springframework.stereotype.Service;
 
 

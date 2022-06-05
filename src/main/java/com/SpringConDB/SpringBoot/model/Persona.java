@@ -1,5 +1,5 @@
 
-package model;
+package com.SpringConDB.SpringBoot.model;
 
 import java.io.Serializable;
 import javax.persistence.Column;

@@ -1,8 +1,8 @@
 
-package service;
+package com.SpringConDB.SpringBoot.service;
 
 import java.util.List;
-import model.Persona;
+import com.SpringConDB.SpringBoot.model.Persona;
 
 
 public interface IPersonaService {
