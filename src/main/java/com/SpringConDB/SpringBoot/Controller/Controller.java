@@ -3,8 +3,10 @@ package com.SpringConDB.SpringBoot.Controller;
 
 
 //import java.util.ArrayList;
+import com.SpringConDB.SpringBoot.model.Contacto;
 import java.util.List;
 import com.SpringConDB.SpringBoot.model.Persona;
+import com.SpringConDB.SpringBoot.model.Contacto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,29 +17,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.SpringConDB.SpringBoot.service.IPersonaService;
+import com.SpringConDB.SpringBoot.service.IContactoService;
+
 
 @RestController
 public class Controller {  
-    /* 
-    Usado como ejemplo
-    List<Persona> listaPersona = new ArrayList();
-    
-    @GetMapping("/Hola/{nombre}/{apellido}/{edad}")
-    public String decirHola(@PathVariable String nombre,
-                            @PathVariable String apellido,
-                            @PathVariable int edad)
-    {
-        return "Hola Mundo " + nombre + " Apellido: "+ apellido + " Edad: "+ edad;
-    }
-    
-    @GetMapping("/Chau")
-    public String decirChau(@RequestParam String nombre,
-                            @RequestParam String apellido,
-                            @RequestParam int edad){
-        return "Chau Mundo" + nombre + " Apellido: "+ apellido + " Edad: "+ edad;
-    }
-    */
-    
+
     
     @Autowired
     private IPersonaService persoServ;
@@ -45,8 +30,6 @@ public class Controller {
     @PostMapping ("/new/persona")
     public void agregarPersona(@RequestBody Persona pers){
         persoServ.crearPersona(pers);
-
-//listaPersona.add(pers);
     }
     
     
@@ -54,11 +37,37 @@ public class Controller {
     @ResponseBody
     public List<Persona> verPersona(){
         return persoServ.verPersonas();
-        //return listaPersona;
     }
     
     @DeleteMapping("/delete/{id}")
     public void borrarPersona(@PathVariable Long id){
         persoServ.borrarPersona(id);
     }
+
+    
+    
+    
+    
+    
+    @Autowired
+    private IContactoService contacServ;
+    
+    @PostMapping ("/contacto/new")
+    public void agregarContacto(@RequestBody Contacto contac){
+        contacServ.crearContacto(contac);
+    }
+    
+    
+    @GetMapping("/contacto/ver")
+    @ResponseBody
+    public List<Contacto> verContacto(){
+        return contacServ.verContacto();
+    }
+    
+    @DeleteMapping("/contacto/delete/{id}")
+    public void borrarContacto(@PathVariable Long id){
+        contacServ.borrarContacto(id);
+    }
+        
+    
 }
