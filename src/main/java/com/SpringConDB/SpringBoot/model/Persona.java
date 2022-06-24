@@ -15,20 +15,20 @@ public class Persona implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private Long id;
-
+    private Long idPer;
     private String nombre;
-
-    private String apellido;
+    private String apellido;   
     
     public Persona(){ 
     }
     
-    public Persona(Long id, String nombre, String apellido){
-        this.id = id;
+    public Persona(Long idPer, String nombre, String apellido) {
+        this.idPer = idPer;
         this.nombre = nombre;
         this.apellido = apellido;
     }
+    
+    
     
     
 }

@@ -14,5 +14,5 @@ public interface IContactoService {
 
     public Contacto buscarContacto(Long id);
 
-
+    public Contacto buscarContactoPorId(Long id);
 }

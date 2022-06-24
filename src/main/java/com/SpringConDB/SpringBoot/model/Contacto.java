@@ -15,7 +15,7 @@ public class Contacto implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     
-    private Long id;
+    private Long idcont;
     private String nombre;
     private String email;
     private String texto;
@@ -23,8 +23,8 @@ public class Contacto implements Serializable {
     public Contacto(){
     }
     
-    public Contacto(Long id, String nombre, String email, String texto){
-        this.id = id;
+    public Contacto(Long idcont, String nombre, String email, String texto){
+        this.idcont = idcont;
         this.nombre = nombre;
         this.email = email;
         this.texto = texto;
