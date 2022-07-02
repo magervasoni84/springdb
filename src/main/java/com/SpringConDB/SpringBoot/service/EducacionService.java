@@ -3,7 +3,7 @@ package com.SpringConDB.SpringBoot.service;
 
 import com.SpringConDB.SpringBoot.model.Educacion;
 import com.SpringConDB.SpringBoot.repository.EducacionRepository;
-import exception.UserNotFoundException;
+import com.SpringConDB.SpringBoot.exception.UserNotFoundException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

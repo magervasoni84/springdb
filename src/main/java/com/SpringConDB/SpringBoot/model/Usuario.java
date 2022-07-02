@@ -91,5 +91,5 @@ public class Usuario implements Serializable{
         this.fotoPerfil = fotoPerfil;
     }
 
-  
+    
 }

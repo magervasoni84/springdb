@@ -4,7 +4,7 @@ package com.SpringConDB.SpringBoot.service;
 import java.util.List;
 import com.SpringConDB.SpringBoot.model.Usuario;
 import com.SpringConDB.SpringBoot.repository.UsuarioRepository;
-import exception.UserNotFoundException;
+import com.SpringConDB.SpringBoot.exception.UserNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,7 +36,7 @@ public class UsuarioService {
         usuarioRepository.deleteById(id);
     }
     
-    public Usuario buscarUsuarioPorId(Long id){
+    public Usuario buscarUsuarioPorId(Long id){   
         return usuarioRepository.findById(id).orElseThrow(()-> new UserNotFoundException("Usuario no encontrado"));
     }
 }

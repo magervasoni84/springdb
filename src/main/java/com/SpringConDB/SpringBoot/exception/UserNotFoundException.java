@@ -1,5 +1,5 @@
 
-package exception;
+package com.SpringConDB.SpringBoot.exception;
 
 
 public class UserNotFoundException extends RuntimeException{

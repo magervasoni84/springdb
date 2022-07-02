@@ -34,7 +34,7 @@ public class EducacionController {
         return new ResponseEntity<>(educacion, HttpStatus.OK);
     }
     
-    @PutMapping("/update") //cuando editamos  PostMapping si añadimos 
+    @PutMapping("/update") //cuando editamos,  PostMapping si añadimos 
     public ResponseEntity<Educacion> editarEducacion(@RequestBody Educacion educacion){
         Educacion updateEducacion=educacionService.editarEducacion(educacion);
         return new ResponseEntity<>(updateEducacion, HttpStatus.OK);

@@ -6,7 +6,7 @@ import com.SpringConDB.SpringBoot.model.Contacto;
 import com.SpringConDB.SpringBoot.model.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.SpringConDB.SpringBoot.repository.ContactoRepository;
-import exception.UserNotFoundException;
+import com.SpringConDB.SpringBoot.exception.UserNotFoundException;
 import org.springframework.stereotype.Service;
 
 
