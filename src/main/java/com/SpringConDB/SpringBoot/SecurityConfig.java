@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
@@ -49,10 +50,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         return super.authenticationManagerBean();
     }
 
-   
-    
-    
-    
     @Override
     @Bean
     public AuthenticationManager authenticationManager(
@@ -73,6 +70,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         http.addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
     }
     
+    
+//          @Override
+//        protected void configure(HttpSecurity http) throws Exception {
+//            http.csrf().disable()
+//                    .authorizeRequests()
+//                    .antMatchers(HttpMethod.OPTIONS, "/educacion/*").permitAll()
+//                    .antMatchers(HttpMethod.POST, "/educacion/*").permitAll()
+//                    .antMatchers(HttpMethod.OPTIONS, "/usuario/id/1").permitAll()
+//                    .antMatchers(HttpMethod.POST, "/usuario/id/1").permitAll()
+//                    .anyRequest().authenticated();
+//        }      
     
     @Bean
     protected AuthenticationManager getAuthenticationManager() throws Exception {
