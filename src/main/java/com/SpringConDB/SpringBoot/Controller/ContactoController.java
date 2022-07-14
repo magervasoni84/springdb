@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/contacto")
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins={"https://gervasoni-portfolio.herokuapp.com/" , "http://localhost:4200"})
 
 public class ContactoController {
     private final ContactoService contacServ;
