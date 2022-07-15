@@ -1,0 +1,12 @@
+Para Pushear a heroku a traves de la consola
+
+git add . 
+git commit -m "Going to push to heroku and Git"  
+git push https://git.heroku.com/gervasoni-portfolio.git master 
+
+
+Para GitHub 
+
+git add . 
+git commit -m "Going to push to heroku and Git"  
+git push origin master
