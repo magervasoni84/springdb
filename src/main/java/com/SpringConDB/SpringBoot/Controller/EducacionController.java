@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
   
 @RestController
-@RequestMapping("/gervasoni.portfolio.herokuapp-com/api/educacion")
+@RequestMapping("/api/educacion")
 @CrossOrigin(origins={"https://gervasoni-portfolio.web.app" , "http://localhost:4200"})
 public class EducacionController {
     private final EducacionService educacionService;
