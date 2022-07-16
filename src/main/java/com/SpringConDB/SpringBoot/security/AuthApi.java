@@ -31,7 +31,7 @@ public class AuthApi {
 @Autowired
     JwtTokenUtil jwtTokenUtil;
 
-@PostMapping("/api/login")
+@PostMapping("https://gervasoni-portfolio.herokuapp.com/api/login")
     public ResponseEntity<?> login(@RequestBody @Valid AuthRequest request){
         try{
             Authentication authentication= authManager.authenticate(
