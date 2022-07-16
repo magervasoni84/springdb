@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
+@CrossOrigin(origins={"https://gervasoni-portfolio.web.app" , "http://localhost:4200"})
 @RequestMapping("/api/contacto")
-//@CrossOrigin(origins={"https://gervasoni-portfolio.web.app" , "http://localhost:4200"})
 
 public class ContactoController {
     private final ContactoService contacServ;
