@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@CrossOrigin(origins = {"https://gervasoni-portfolio.web.app", "http://localhost:4200"}, maxAge = 3600, allowCredentials = "true")
+//@CrossOrigin(origins = {"https://gervasoni-portfolio.web.app", "http://localhost:4200"}, maxAge = 3600, allowCredentials = "true")
 
 
 public class AuthApi {
