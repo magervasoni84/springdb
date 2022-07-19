@@ -21,6 +21,8 @@ public class Usuario implements Serializable{
     private Long id;
     private String nombre;
     private String apellido;
+    private String email;
+    private String ubicacion;
     private String titulo;
     private String descripcion;
     private String fotoPerfil;
@@ -34,14 +36,17 @@ public class Usuario implements Serializable{
         
     }
     
-    public Usuario(Long id, String nombre, String apellido, String titulo, String descripcion, String fotoPerfil) {
+    public Usuario(Long id, String nombre, String apellido, String titulo, String descripcion, String fotoPerfil, String email, String ubicacion) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.fotoPerfil = fotoPerfil;
+        this.email = email;
+        this.ubicacion = ubicacion;
     }
+
 
     public Long getId() {
         return id;
@@ -91,5 +96,22 @@ public class Usuario implements Serializable{
         this.fotoPerfil = fotoPerfil;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+    
+    
     
 }
