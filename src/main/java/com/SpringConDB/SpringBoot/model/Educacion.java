@@ -15,26 +15,22 @@ public class Educacion {
     private int fechaEdu;
     private String descEdu;
     private String imagenEdu;
-    private String MasInfoEdu;
-    private Boolean MasInfoBoolEdu;
+    private String masInfoEdu;
+
 
     public Educacion() {
         
     }
 
-    public void setMasInfoBoolEdu(Boolean MasInfoBoolEdu) {
-        this.MasInfoBoolEdu = MasInfoBoolEdu;
-    }
 
     
-    public Educacion(Long idEdu, String tituloEdu, int fechaEdu, String descEdu, String imagenEdu, String MasInfoEdu, Boolean MasInfoBoolEdu) {
+    public Educacion(Long idEdu, String tituloEdu, int fechaEdu, String descEdu, String imagenEdu, String masInfoEdu) {
         this.idEdu = idEdu;
         this.tituloEdu = tituloEdu;
         this.fechaEdu = fechaEdu;
         this.descEdu = descEdu;
         this.imagenEdu = imagenEdu;
-        this.MasInfoEdu = MasInfoEdu;
-        this.MasInfoBoolEdu = MasInfoBoolEdu;
+        this.masInfoEdu = masInfoEdu;
     }
 
     public Long getIdEdu() {
@@ -79,15 +75,11 @@ public class Educacion {
     
     
     public String getMasInfoEdu() {
-        return MasInfoEdu;
+        return masInfoEdu;
     }
 
     public void setMasInfoEdu(String MasInfoEdu) {
-        this.MasInfoEdu = MasInfoEdu;
-    }
-
-    public Boolean getMasInfoBoolEdu() {
-        return MasInfoBoolEdu;
+        this.masInfoEdu = MasInfoEdu;
     }
 
     
